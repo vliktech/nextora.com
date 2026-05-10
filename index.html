@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- META -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nexora | Smart Automation Ecosystem</title>
+
+  <meta
+    name="description"
+    content="Nexora adalah smart automation ecosystem modern untuk sekolah, perusahaan, HRIS, POS, inventory, restaurant, AI monitoring, dan cloud automation."
+  >
+
+  <meta
+    name="keywords"
+    content="automation system, HRIS, POS, inventory, AI monitoring, school system, Nexora"
+  >
+
+  <meta name="author" content="Nexora">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="Nexora">
+  <meta property="og:description" content="Smart Automation Ecosystem">
+  <meta property="og:type" content="website">
+
+  <!-- FAVICON -->
+  <link
+    rel="icon"
+    href="https://raw.githubusercontent.com/vliktech/nexora-assets/main/Logo%20Nexora%20Official.png"
+    type="image/png"
+  >
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- TAILWIND -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS -->
+  <link
+    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="hero-gradient overflow-x-hidden">
+
+  <!-- LOADER -->
+  <div
+    id="loader"
+    class="fixed inset-0 bg-[#050816] z-[9999] flex items-center justify-center transition duration-500"
+  >
+
+    <div class="text-center px-6">
+
+      <img
+        src="https://raw.githubusercontent.com/vliktech/nexora-assets/main/Logo%20Nexora%20Official.png"
+        class="w-24 md:w-28 mx-auto mb-6 floating object-contain"
+      >
+
+      <h1 class="text-4xl md:text-5xl font-black glow-text tracking-wide">
+        NEXORA
+      </h1>
+
+      <p class="text-gray-400 mt-3 text-[10px] md:text-sm tracking-[4px] md:tracking-[6px] uppercase">
+        Smart Automation Ecosystem
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- PARTICLE BACKGROUND -->
+  <div class="fixed inset-0 -z-10 opacity-30 overflow-hidden">
+
+    <div class="absolute top-0 left-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-cyan-500/10 blur-[150px] rounded-full"></div>
+
+    <div class="absolute bottom-0 right-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-purple-500/10 blur-[150px] rounded-full"></div>
+
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 w-full z-50 glass border-b border-white/5">
+
+    <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 md:py-5 flex items-center justify-between">
+
+      <!-- LOGO -->
+      <div class="flex items-center gap-3 md:gap-4">
+
+        <img
+          src="https://raw.githubusercontent.com/vliktech/nexora-assets/main/Logo%20Nexora%20Official.png"
+          class="w-11 md:w-14 object-contain floating"
+        >
+
+        <div>
+
+          <h1 class="text-2xl md:text-3xl font-black tracking-wide glow-text leading-none">
+            NEXORA
+          </h1>
+
+          <p class="text-[8px] md:text-[10px] tracking-[3px] md:tracking-[4px] text-gray-400 uppercase mt-1">
+            Smart Automation
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- DESKTOP MENU -->
+      <div class="hidden lg:flex items-center gap-12 text-sm font-medium">
+
+        <button
+          onclick="scrollToSection('services')"
+          class="hover:text-cyan-400 transition duration-300"
+        >
+          Services
+        </button>
+
+        <button
+          onclick="scrollToSection('about')"
+          class="hover:text-cyan-400 transition duration-300"
+        >
+          About
+        </button>
+
+        <button
+          onclick="scrollToSection('contact')"
+          class="hover:text-cyan-400 transition duration-300"
+        >
+          Contact
+        </button>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="hidden lg:flex items-center gap-4">
+
+        <button
+          onclick="scrollToSection('contact')"
+          class="btn-primary px-7 py-3 rounded-2xl font-semibold"
+        >
+          Get Started
+        </button>
+
+      </div>
+
+      <!-- MOBILE MENU BUTTON -->
+      <button
+        id="menuBtn"
+        class="lg:hidden glass w-11 h-11 rounded-xl flex items-center justify-center"
+      >
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+
+        </svg>
+
+      </button>
+
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div
+      id="mobileMenu"
+      class="hidden lg:hidden px-4 pb-5"
+    >
+
+      <div class="glass rounded-3xl p-6 flex flex-col gap-5 text-center">
+
+        <button
+          onclick="scrollToSection('services')"
+          class="hover:text-cyan-400 transition text-base"
+        >
+          Services
+        </button>
+
+        <button
+          onclick="scrollToSection('about')"
+          class="hover:text-cyan-400 transition text-base"
+        >
+          About
+        </button>
+
+        <button
+          onclick="scrollToSection('contact')"
+          class="hover:text-cyan-400 transition text-base"
+        >
+          Contact
+        </button>
+
+        <button
+          onclick="scrollToSection('contact')"
+          class="btn-primary w-full py-4 rounded-2xl font-semibold mt-2"
+        >
+          Start Project
+        </button>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+  <!-- PASTE HERO DISINI -->
+<section class="hero-gradient min-h-screen flex items-center relative overflow-hidden pt-36 hero-mobile">
+
+  <!-- BACKGROUND GLOW -->
+  <div class="absolute top-[-150px] left-[-150px] w-[500px] h-[500px] bg-cyan-500/20 blur-[140px] rounded-full"></div>
+
+  <div class="absolute bottom-[-150px] right-[-150px] w-[500px] h-[500px] bg-purple-500/20 blur-[140px] rounded-full"></div>
+
+  <!-- GRID EFFECT -->
+  <div
+    class="absolute inset-0 opacity-[0.04]"
+    style="
+      background-image:
+      linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px);
+      background-size:40px 40px;
+    "
+  ></div>
+
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center relative z-10 hero-grid">
+
+    <!-- LEFT CONTENT -->
+    <div
+      data-aos="fade-right"
+      class="w-full"
+    >
+
+      <!-- BADGE -->
+      <div class="glass inline-flex items-center gap-3 px-5 py-3 rounded-full mb-8 border border-cyan-400/20 max-w-full">
+
+        <div class="w-3 h-3 rounded-full bg-cyan-400 animate-pulse flex-shrink-0"></div>
+
+        <p class="text-sm uppercase tracking-[4px] text-cyan-300 font-semibold leading-relaxed">
+          Smart Automation Ecosystem
+        </p>
+
+      </div>
+
+      <!-- TITLE -->
+      <h1 class="hero-title text-5xl md:text-7xl font-black leading-tight mb-8 break-words">
+
+        Build The Future
+        <br>
+
+        With
+        <span class="glow-text">
+          Nexora
+        </span>
+
+      </h1>
+
+      <!-- DESCRIPTION -->
+      <p class="text-gray-300 text-xl leading-relaxed mb-12 max-w-2xl">
+
+        Nexora membantu sekolah, perusahaan, restoran, dan bisnis modern
+        melakukan digitalisasi operasional melalui AI automation,
+        HRIS, POS, inventory system, monitoring realtime,
+        dan smart cloud ecosystem.
+
+      </p>
+
+      <!-- BUTTON -->
+      <div class="flex flex-wrap gap-5 mb-16 hero-buttons">
+
+        <a href="#contact" class="w-full md:w-auto">
+
+          <button class="btn-primary w-full md:w-auto px-10 py-5 rounded-2xl font-semibold text-lg">
+
+            Start Project
+
+          </button>
+
+        </a>
+
+        <a href="#services" class="w-full md:w-auto">
+
+          <button class="glass w-full md:w-auto px-10 py-5 rounded-2xl font-semibold text-lg border border-white/10 hover:border-cyan-400 transition">
+
+            Explore Services
+
+          </button>
+
+        </a>
+
+      </div>
+
+      <!-- STATS -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-2xl hero-stats">
+
+        <div class="glass rounded-3xl p-6 text-center glow-box">
+
+          <h3 class="text-4xl font-black glow-text mb-2">
+            10+
+          </h3>
+
+          <p class="text-gray-400 text-sm">
+            Automation Solutions
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-6 text-center glow-box">
+
+          <h3 class="text-4xl font-black glow-text mb-2">
+            AI
+          </h3>
+
+          <p class="text-gray-400 text-sm">
+            Powered System
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-6 text-center glow-box">
+
+          <h3 class="text-4xl font-black glow-text mb-2">
+            Cloud
+          </h3>
+
+          <p class="text-gray-400 text-sm">
+            Scalable Ecosystem
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  <!-- RIGHT CONTENT -->
+<div
+  class="relative flex justify-center items-center w-full min-h-[320px] md:min-h-[700px]"
+  data-aos="fade-left"
+>
+
+  <!-- MAIN GLOW -->
+  <div class="absolute w-[220px] h-[220px] md:w-[450px] md:h-[450px] bg-cyan-500/20 blur-[90px] rounded-full"></div>
+
+  <!-- SECONDARY GLOW -->
+  <div class="absolute w-[180px] h-[180px] md:w-[300px] md:h-[300px] bg-purple-500/20 blur-[90px] rounded-full"></div>
+
+  <!-- GLASS CIRCLE -->
+  <div class="absolute w-[240px] h-[240px] md:w-[520px] md:h-[520px] rounded-full border border-white/10 glass hidden md:block"></div>
+
+  <!-- LOGO -->
+  <img
+    src="https://raw.githubusercontent.com/vliktech/nexora-assets/main/Logo%20Nexora%20Official.png"
+    class="hero-logo w-[180px] sm:w-[220px] md:w-[500px] floating relative z-10 object-contain drop-shadow-[0_0_60px_rgba(59,130,246,0.5)]"
+  >
+
+  <!-- FLOAT CARD 1 -->
+  <div class="absolute top-10 left-0 glass px-6 py-4 rounded-2xl hidden lg:block">
+
+    <p class="text-cyan-300 text-sm font-semibold mb-1">
+      AI Monitoring
+    </p>
+
+    <h4 class="font-bold">
+      Smart Analytics
+    </h4>
+
+  </div>
+
+  <!-- FLOAT CARD 2 -->
+  <div class="absolute bottom-10 right-0 glass px-6 py-4 rounded-2xl hidden lg:block">
+
+    <p class="text-purple-300 text-sm font-semibold mb-1">
+      Cloud System
+    </p>
+
+    <h4 class="font-bold">
+      Realtime Automation
+    </h4>
+
+  </div>
+
+</div>
+    </div>
+
+  </div>
+
+</section>
+
+
+  <!-- SERVICES -->
+  <!-- PASTE SERVICES DISINI -->
+<section id="services" class="py-32 relative overflow-hidden">
+
+  <!-- BACKGROUND GLOW -->
+  <div class="absolute top-0 left-0 w-[400px] h-[400px] bg-cyan-500/10 blur-[120px] rounded-full"></div>
+
+  <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-500/10 blur-[120px] rounded-full"></div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+    <!-- HEADER -->
+    <div class="text-center mb-20" data-aos="fade-up">
+
+      <div class="glass inline-flex items-center gap-3 px-5 py-3 rounded-full mb-8 border border-cyan-400/20">
+
+        <div class="w-3 h-3 rounded-full bg-cyan-400 animate-pulse"></div>
+
+        <p class="text-sm uppercase tracking-[4px] text-cyan-300 font-semibold">
+          Our Services
+        </p>
+
+      </div>
+
+      <h2 class="section-title mb-6">
+
+        Smart Digital
+        <span class="glow-text">
+          Solutions
+        </span>
+
+      </h2>
+
+      <p class="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
+
+        Nexora menyediakan berbagai solusi digital modern untuk sekolah,
+        perusahaan, restoran, UMKM, dan enterprise melalui ecosystem
+        automation berbasis AI dan cloud technology.
+
+      </p>
+
+    </div>
+
+    <!-- SERVICES GRID -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- CARD 1 -->
+      <div
+        class="service-card glass rounded-3xl p-8 relative"
+        data-aos="fade-up"
+      >
+
+        <div class="w-16 h-16 rounded-2xl bg-cyan-500/10 flex items-center justify-center mb-6 text-3xl">
+          🤖
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4">
+          AI Attendance
+        </h3>
+
+        <p class="text-gray-400 leading-relaxed mb-6">
+
+          Sistem absensi AI dengan kamera, GPS,
+          monitoring realtime, face recognition,
+          dan smart analytics dashboard.
+
+        </p>
+
+        <div class="text-cyan-400 font-semibold">
+          Smart Monitoring →
+        </div>
+
+      </div>
+
+      <!-- CARD 2 -->
+      <div
+        class="service-card glass rounded-3xl p-8 relative"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+
+        <div class="w-16 h-16 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-6 text-3xl">
+          👨‍💼
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4">
+          Mini HRIS
+        </h3>
+
+        <p class="text-gray-400 leading-relaxed mb-6">
+
+          Employee management, payroll,
+          attendance system, leave management,
+          dan analytics karyawan modern.
+
+        </p>
+
+        <div class="text-cyan-400 font-semibold">
+          HR Automation →
+        </div>
+
+      </div>
+
+      <!-- CARD 3 -->
+      <div
+        class="service-card glass rounded-3xl p-8 relative"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+
+        <div class="w-16 h-16 rounded-2xl bg-cyan-500/10 flex items-center justify-center mb-6 text-3xl">
+          🛒
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4">
+          POS & Inventory
+        </h3>
+
+        <p class="text-gray-400 leading-relaxed mb-6">
+
+          Smart cashier system dengan inventory realtime,
+          stock monitoring, sales analytics,
+          dan cloud dashboard.
+
+        </p>
+
+        <div class="text-cyan-400 font-semibold">
+          Smart POS →
+        </div>
+
+      </div>
+
+      <!-- CARD 4 -->
+      <div
+        class="service-card glass rounded-3xl p-8 relative"
+        data-aos="fade-up"
+      >
+
+        <div class="w-16 h-16 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-6 text-3xl">
+          🍽️
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4">
+          Restaurant System
+        </h3>
+
+        <p class="text-gray-400 leading-relaxed mb-6">
+
+          Digital menu, kitchen order,
+          POS restaurant, waiter dashboard,
+          dan automation restaurant modern.
+
+        </p>
+
+        <div class="text-cyan-400 font-semibold">
+          Smart Restaurant →
+        </div>
+
+      </div>
+
+      <!-- CARD 5 -->
+      <div
+        class="service-card glass rounded-3xl p-8 relative"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+
+        <div class="w-16 h-16 rounded-2xl bg-cyan-500/10 flex items-center justify-center mb-6 text-3xl">
+          🏫
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4">
+          School Platform
+        </h3>
+
+        <p class="text-gray-400 leading-relaxed mb-6">
+
+          Sistem sekolah modern dengan dashboard realtime,
+          monitoring siswa, attendance,
+          dan parent notification.
+
+        </p>
+
+        <div class="text-cyan-400 font-semibold">
+          Smart Education →
+        </div>
+
+      </div>
+
+      <!-- CARD 6 -->
+      <div
+        class="service-card glass rounded-3xl p-8 relative"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+
+        <div class="w-16 h-16 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-6 text-3xl">
+          ⚡
+        </div>
+
+        <h3 class="text-2xl font-bold mb-4">
+          Automation Solution
+        </h3>
+
+        <p class="text-gray-400 leading-relaxed mb-6">
+
+          Workflow automation custom untuk berbagai
+          kebutuhan perusahaan berbasis AI,
+          cloud system, dan realtime integration.
+
+        </p>
+
+        <div class="text-cyan-400 font-semibold">
+          Custom Automation →
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- ABOUT -->
+  <!-- PASTE ABOUT DISINI -->
+<section id="about" class="py-32 relative overflow-hidden bg-[#060b18]">
+
+  <!-- BACKGROUND GLOW -->
+  <div class="absolute top-0 right-0 w-[450px] h-[450px] bg-cyan-500/10 blur-[120px] rounded-full"></div>
+
+  <div class="absolute bottom-0 left-0 w-[450px] h-[450px] bg-purple-500/10 blur-[120px] rounded-full"></div>
+
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center relative z-10">
+
+    <!-- LEFT CONTENT -->
+    <div data-aos="fade-right">
+
+      <!-- BADGE -->
+      <div class="glass inline-flex items-center gap-3 px-5 py-3 rounded-full mb-8 border border-cyan-400/20">
+
+        <div class="w-3 h-3 rounded-full bg-cyan-400 animate-pulse"></div>
+
+        <p class="text-sm uppercase tracking-[4px] text-cyan-300 font-semibold">
+          About Nexora
+        </p>
+
+      </div>
+
+      <!-- TITLE -->
+      <h2 class="section-title mb-8">
+
+        Building The Future Of
+        <span class="glow-text">
+          Smart Automation
+        </span>
+
+      </h2>
+
+      <!-- DESCRIPTION -->
+      <p class="text-gray-400 text-xl leading-relaxed mb-8">
+
+        Nexora adalah smart automation ecosystem yang membantu
+        sekolah, UMKM, startup, restoran, dan perusahaan modern
+        melakukan transformasi digital operasional secara cepat,
+        scalable, dan efisien.
+
+      </p>
+
+      <p class="text-gray-400 text-xl leading-relaxed mb-10">
+
+        Dengan teknologi modern berbasis AI, Google Apps Script,
+        Firebase, cloud ecosystem, dan realtime monitoring,
+        Nexora menghadirkan solusi automation modern
+        untuk berbagai kebutuhan bisnis dan pendidikan.
+
+      </p>
+
+      <!-- FEATURE LIST -->
+      <div class="grid md:grid-cols-2 gap-5">
+
+        <div class="glass rounded-2xl p-5 flex items-center gap-4">
+
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-2xl">
+            ⚡
+          </div>
+
+          <div>
+            <h4 class="font-bold mb-1">
+              Fast Integration
+            </h4>
+
+            <p class="text-gray-400 text-sm">
+              Setup cepat & scalable
+            </p>
+          </div>
+
+        </div>
+
+        <div class="glass rounded-2xl p-5 flex items-center gap-4">
+
+          <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-2xl">
+            ☁️
+          </div>
+
+          <div>
+            <h4 class="font-bold mb-1">
+              Cloud Ecosystem
+            </h4>
+
+            <p class="text-gray-400 text-sm">
+              Realtime cloud system
+            </p>
+          </div>
+
+        </div>
+
+        <div class="glass rounded-2xl p-5 flex items-center gap-4">
+
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-2xl">
+            🤖
+          </div>
+
+          <div>
+            <h4 class="font-bold mb-1">
+              AI Powered
+            </h4>
+
+            <p class="text-gray-400 text-sm">
+              Smart automation AI
+            </p>
+          </div>
+
+        </div>
+
+        <div class="glass rounded-2xl p-5 flex items-center gap-4">
+
+          <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-2xl">
+            📊
+          </div>
+
+          <div>
+            <h4 class="font-bold mb-1">
+              Smart Analytics
+            </h4>
+
+            <p class="text-gray-400 text-sm">
+              Monitoring realtime
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="relative" data-aos="fade-left">
+
+      <!-- MAIN CARD -->
+      <div class="glass rounded-[40px] p-10 glow-box relative overflow-hidden">
+
+        <!-- TOP GLOW -->
+        <div class="absolute top-0 right-0 w-40 h-40 bg-cyan-500/10 blur-[80px] rounded-full"></div>
+
+        <!-- TITLE -->
+        <div class="mb-12">
+
+          <p class="text-cyan-300 uppercase tracking-[4px] text-sm mb-3">
+            Nexora Statistics
+          </p>
+
+          <h3 class="text-4xl font-black">
+            Smart Ecosystem
+          </h3>
+
+        </div>
+
+        <!-- STATS -->
+        <div class="grid grid-cols-2 gap-8">
+
+          <div class="glass rounded-3xl p-8 text-center">
+
+            <h3 class="text-5xl font-black glow-text mb-3">
+              50+
+            </h3>
+
+            <p class="text-gray-400">
+              Automation Ideas
+            </p>
+
+          </div>
+
+          <div class="glass rounded-3xl p-8 text-center">
+
+            <h3 class="text-5xl font-black glow-text mb-3">
+              24/7
+            </h3>
+
+            <p class="text-gray-400">
+              Support System
+            </p>
+
+          </div>
+
+          <div class="glass rounded-3xl p-8 text-center">
+
+            <h3 class="text-5xl font-black glow-text mb-3">
+              AI
+            </h3>
+
+            <p class="text-gray-400">
+              Powered Technology
+            </p>
+
+          </div>
+
+          <div class="glass rounded-3xl p-8 text-center">
+
+            <h3 class="text-5xl font-black glow-text mb-3">
+              Cloud
+            </h3>
+
+            <p class="text-gray-400">
+              Scalable Ecosystem
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- CONTACT -->
+  <!-- PASTE CONTACT DISINI -->
+<section id="contact" class="py-32 relative overflow-hidden">
+
+  <!-- BACKGROUND GLOW -->
+  <div class="absolute top-0 left-0 w-[450px] h-[450px] bg-cyan-500/10 blur-[120px] rounded-full"></div>
+
+  <div class="absolute bottom-0 right-0 w-[450px] h-[450px] bg-purple-500/10 blur-[120px] rounded-full"></div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+    <!-- HEADER -->
+    <div class="text-center mb-20" data-aos="fade-up">
+
+      <!-- BADGE -->
+      <div class="glass inline-flex items-center gap-3 px-5 py-3 rounded-full mb-8 border border-cyan-400/20">
+
+        <div class="w-3 h-3 rounded-full bg-cyan-400 animate-pulse"></div>
+
+        <p class="text-sm uppercase tracking-[4px] text-cyan-300 font-semibold">
+          Contact Nexora
+        </p>
+
+      </div>
+
+      <!-- TITLE -->
+      <h2 class="section-title mb-6">
+
+        Let's Build
+        <span class="glow-text">
+          Together
+        </span>
+
+      </h2>
+
+      <!-- DESC -->
+      <p class="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed">
+
+        Konsultasikan kebutuhan digitalisasi,
+        automation system, AI monitoring,
+        HRIS, POS, inventory, dan smart ecosystem bisnis Anda bersama Nexora.
+
+      </p>
+
+    </div>
+
+    <!-- CONTACT GRID -->
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+
+      <!-- LEFT INFO -->
+      <div data-aos="fade-right">
+
+        <!-- CARD -->
+        <div class="glass rounded-[40px] p-10 glow-box">
+
+          <h3 class="text-4xl font-black mb-8">
+            Get In Touch
+          </h3>
+
+          <p class="text-gray-400 text-lg leading-relaxed mb-10">
+
+            Kami membantu bisnis, sekolah,
+            restoran, dan perusahaan modern
+            untuk membangun ecosystem digital
+            yang scalable dan efisien.
+
+          </p>
+
+          <!-- INFO -->
+          <div class="space-y-6">
+
+            <!-- EMAIL -->
+            <div class="glass rounded-2xl p-5 flex items-center gap-5">
+
+              <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center text-2xl">
+                📧
+              </div>
+
+              <div>
+                <p class="text-gray-400 text-sm mb-1">
+                  Email Address
+                </p>
+
+                <h4 class="font-semibold text-lg">
+                  hello@nexora.id
+                </h4>
+              </div>
+
+            </div>
+
+            <!-- PHONE -->
+            <div class="glass rounded-2xl p-5 flex items-center gap-5">
+
+              <div class="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center text-2xl">
+                📞
+              </div>
+
+              <div>
+                <p class="text-gray-400 text-sm mb-1">
+                  Phone Number
+                </p>
+
+                <h4 class="font-semibold text-lg">
+                  +62 812-XXXX-XXXX
+                </h4>
+              </div>
+
+            </div>
+
+            <!-- LOCATION -->
+            <div class="glass rounded-2xl p-5 flex items-center gap-5">
+
+              <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center text-2xl">
+                📍
+              </div>
+
+              <div>
+                <p class="text-gray-400 text-sm mb-1">
+                  Location
+                </p>
+
+                <h4 class="font-semibold text-lg">
+                  Indonesia
+                </h4>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT FORM -->
+      <div data-aos="fade-left">
+
+        <div class="glass rounded-[40px] p-10 glow-box">
+
+          <h3 class="text-4xl font-black mb-10">
+            Start Your Project
+          </h3>
+
+          <!-- FORM -->
+          <form class="space-y-6">
+
+            <!-- NAME -->
+            <div>
+
+              <label class="block text-sm text-gray-400 mb-3">
+                Full Name
+              </label>
+
+              <input
+                type="text"
+                placeholder="Enter your full name"
+                class="w-full bg-[#0f172a] border border-white/5 p-5 rounded-2xl outline-none"
+              >
+
+            </div>
+
+            <!-- EMAIL -->
+            <div>
+
+              <label class="block text-sm text-gray-400 mb-3">
+                Email Address
+              </label>
+
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                class="w-full bg-[#0f172a] border border-white/5 p-5 rounded-2xl outline-none"
+              >
+
+            </div>
+
+            <!-- MESSAGE -->
+            <div>
+
+              <label class="block text-sm text-gray-400 mb-3">
+                Project Details
+              </label>
+
+              <textarea
+                placeholder="Tell us about your project..."
+                class="w-full bg-[#0f172a] border border-white/5 p-5 rounded-2xl outline-none h-44 resize-none"
+              ></textarea>
+
+            </div>
+
+            <!-- BUTTON -->
+            <button
+              type="submit"
+              class="btn-primary w-full py-5 rounded-2xl font-semibold text-lg"
+            >
+
+              Send Message
+
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+  <!-- FOOTER -->
+  <!-- PASTE FOOTER DISINI -->
+<footer class="border-t border-white/10 py-8 text-center text-gray-500">
+  © 2026 Nexora. All Rights Reserved.
+</footer>
+
+  <!-- BACK TO TOP -->
+  <button
+    id="backToTop"
+    class="fixed bottom-5 right-5 hidden btn-primary w-12 h-12 md:w-14 md:h-14 rounded-full z-50 text-lg md:text-xl"
+  >
+    ↑
+  </button>
+
+  <!-- FLOATING CONTACT -->
+  <div class="fixed bottom-5 left-5 z-50">
+
+    <button
+      onclick="scrollToSection('contact')"
+      class="glass px-5 py-3 md:px-6 md:py-4 rounded-2xl border border-cyan-400/20 hover:border-cyan-400 transition text-sm md:text-base"
+    >
+      Contact Us
+    </button>
+
+  </div>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+
+    AOS.init({
+      duration:1000,
+      once:true
+    });
+
+  </script>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
